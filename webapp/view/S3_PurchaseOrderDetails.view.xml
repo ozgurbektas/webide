@@ -1,0 +1,119 @@
+<mvc:View xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:c="sap.ui.core" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+	controllerName="nw.epm.refapps.purchaseorders.approve.controller.S3_PurchaseOrderDetails">
+	<semantic:DetailPage id="detailPage" showNavButton="{device>/system/phone}" navButtonPress="onNavButtonPressed" title="Sözleşme Detayı"
+		floatingFooter="true">
+		<semantic:positiveAction>
+			<semantic:PositiveAction id="approveButton" text="Onayla" press="onApprovePressed"/>
+		</semantic:positiveAction>
+		<semantic:negativeAction>
+			<semantic:NegativeAction id="rejectButton" text="Reddet" press="onRejectPressed"/>
+		</semantic:negativeAction>
+		<semantic:content>
+			<ObjectHeader numberState="None" backgroundDesign="Translucent" condensed="false" visible="true">
+				<attributes>
+					<ObjectAttribute text="OTOKOÇ OTOMOTİV TİC. VE SAN. AŞ." active="false" visible="true"/>
+					<ObjectAttribute text="Satınalma Belgesi : 4100000660" active="false" visible="true"/>
+				</attributes>
+			</ObjectHeader>
+			<IconTabBar selectedKey="__filter0" id="__bar0">
+				<items>
+					<IconTabFilter text="Open" icon="sap-icon://task" iconColor="Critical">
+						<content>
+							<form:SimpleForm id="attributesSimpleForm" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"
+								emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="3" columnsM="3">
+								<form:content>
+									<c:Title/>
+									<Label text="Kalem"/>
+									<Text text="10"/>
+									<Label text="Onay Seçeneği"/>
+									<Text text="True"/>
+									<Label text="Türk"/>
+									<Text text="VK"/>
+									<Label text="Tip"/>
+									<Text text="K"/>
+									<Label text="SAG"/>
+									<Text text="113"/>
+									<Label text="SAS Glş."/>
+									<Text text=""/>
+									<Label text="Belge Tarihi"/>
+									<Text text="11.09.2015"/>
+									<Label text="Maleme"/>
+									<Text text=""/>
+									<Label text="Kısa Metin"/>
+									<Text text="Araç Kiralama"/>
+									<Label text="Mal Grubu"/>
+									<Text text="SSD_VREN"/>
+									<Label text="S"/>
+									<Text text=""/>
+									<c:Title/>
+									<Label text="K"/>
+									<Text text="S"/>
+									<Label text="H"/>
+									<Text text="Z"/>
+									<Label text="ÜY"/>
+									<Text text="TR30"/>
+									<Label text="Depo Yeri"/>
+									<Text text=""/>
+									<Label text="Miktar"/>
+									<Text text="0"/>
+									<Label text="SAS ÖB"/>
+									<Text text="RNB"/>
+									<Label text="Miktar"/>
+									<Text text=""/>
+									<Label text="Depo ÖB"/>
+									<Text text=""/>
+									<Label text="Net Fiyat"/>
+									<Text text="31,500.00"/>
+									<Label text="Para Birimi"/>
+									<Text text="TRY"/>
+									<c:Title/>
+									<Label text="Fiyat Birimi"/>
+									<Text text="1"/>
+									<Label text="Hedef Miktar"/>
+									<Text text="1"/>
+									<Label text="Açık Hedef Miktar"/>
+									<Text text="1"/>
+									<Label text="Teslimatı Yapılacak"/>
+									<Text text="0"/>
+									<Label text="Teslimatı Yapılacak(Değer)"/>
+									<Text text="0,00"/>
+									<Label text="Hesabı Yapılacak(Miktar)"/>
+									<Text text="0"/>
+									<Label text="Hesabı Yapılacak(Değer)"/>
+									<Text text="0,00"/>
+									<Label text="Sayı"/>
+									<Text text="1"/>
+								</form:content>
+							</form:SimpleForm>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter text="Yorum" icon="sap-icon://notification-2" iconColor="Critical" id="__filter1">
+						<content>
+							<form:SimpleForm layout="ResponsiveGridLayout">
+								<form:content>
+									<TextArea width="100%" rows="5"/>
+								</form:content>
+							</form:SimpleForm>
+							<form:SimpleForm layout="ResponsiveGridLayout">
+								<form:content>
+									<Button text="Gönder" width="100%"/>
+								</form:content>
+							</form:SimpleForm>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter text="Ekler" icon="sap-icon://attachment" iconColor="Critical">
+						<content>
+							<UploadCollection id="UploadCollection"></UploadCollection>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter text="Tarihçe" icon="sap-icon://history" iconColor="Critical">
+						<content>
+							<Image src="http://flexiblegraphic.com/images/timeline.jpg"/>
+						</content>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</semantic:content>
+	</semantic:DetailPage>
+</mvc:View>

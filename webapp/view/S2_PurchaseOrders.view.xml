@@ -1,0 +1,58 @@
+<mvc:View controllerName="nw.epm.refapps.purchaseorders.approve.controller.S2_PurchaseOrders" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic" xmlns="sap.m">
+	<semantic:MasterPage id="masterPage" navButtonPress="onNavButtonPressed" showNavButton="true"
+		title="Onay Bekleyen Sözleşmeler (5)"
+		showFooter="{= ${globalProperties>/isMultiSelect} &amp;&amp; ${device>/system/phone}}"
+		floatingFooter="{= ${globalProperties>/isMultiSelect} &amp;&amp; ${device>/system/phone}}">
+		<semantic:multiSelectAction>
+			<semantic:MultiSelectAction id="multiSelectButton" pressed="{globalProperties>/isMultiSelect}"
+				enabled="{= (${globalProperties>/isMultiSelect} || ${viewProperties>/itemCount} > 0) &amp;&amp; !(${globalProperties>/isSwipeRunning} || ${globalProperties>/isBusyApproving}) }"
+				press="onMultiSelectPressed"/>
+		</semantic:multiSelectAction>
+		<semantic:content>
+			<List id="poList" mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}" selectionChange="onSelectionChange">
+				<items>
+					<ObjectListItem>
+						<attributes>
+							<ObjectAttribute text="OTOKOÇ OTOMOTİV TİC. VE SAN. AŞ." active="false"/>
+							<ObjectAttribute text="200001286" active="false"/>
+							<ObjectAttribute text="Satınalma Belgesi : 4100000660" active="false"/>
+						</attributes>
+					</ObjectListItem>
+					<ObjectListItem>
+						<attributes>
+							<ObjectAttribute text="OTOKOÇ OTOMOTİV TİC. VE SAN. AŞ." active="false"/>
+							<ObjectAttribute text="200001286" active="false"/>
+							<ObjectAttribute text="Satınalma Belgesi : 4100000660" active="false"/>
+						</attributes>
+					</ObjectListItem>
+					<ObjectListItem>
+						<attributes>
+							<ObjectAttribute text="OTOKOÇ OTOMOTİV TİC. VE SAN. AŞ." active="false"/>
+							<ObjectAttribute text="200001286" active="false"/>
+							<ObjectAttribute text="Satınalma Belgesi : 4100000660" active="false"/>
+						</attributes>
+					</ObjectListItem>
+					<ObjectListItem>
+						<attributes>
+							<ObjectAttribute text="OTOKOÇ OTOMOTİV TİC. VE SAN. AŞ." active="false"/>
+							<ObjectAttribute text="200001286" active="false"/>
+							<ObjectAttribute text="Satınalma Belgesi : 4100000660" active="false"/>
+						</attributes>
+					</ObjectListItem>
+					<ObjectListItem>
+						<attributes>
+							<ObjectAttribute text="OTOKOÇ OTOMOTİV TİC. VE SAN. AŞ." active="false"/>
+							<ObjectAttribute text="200001286" active="false"/>
+							<ObjectAttribute text="Satınalma Belgesi : 4100000660" active="false"/>
+						</attributes>
+					</ObjectListItem>
+				</items>
+			</List>
+		</semantic:content>
+		<semantic:customFooterContent>
+			<Button id="processButton" enabled="{= ${globalProperties>/selectedPurchaseOrders}.length > 0}" text="{i18n>xbut.process}" type="Emphasized"
+				visible="{= ${globalProperties>/isMultiSelect} &amp;&amp; ${device>/system/phone} }" press="onProcessPressed"/>
+		</semantic:customFooterContent>
+	</semantic:MasterPage>
+</mvc:View>
